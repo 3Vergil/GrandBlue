@@ -1,0 +1,42 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+.UserInformation{
+    @include func.glass-effect(#cdc5c582, $radius: 0.5rem, $blur: 0.2rem);
+    @include func.grid-container($column-size: 1fr 2fr, $row-size: 1fr);
+    padding: 1rem;
+
+    .DropArea{
+        @include func.glass-effect(#1a81b08f, $radius: 1.5rem, $blur: 0.4rem);
+        @include func.flex-center();
+        width: 12rem;
+        height: 12rem;
+        .Body{
+            width: 90%;
+            height: 90%;
+            border-radius: 1.5rem;
+            border: 0.2rem dashed #0cbec7;
+            background-color: #10a7af62;
+            overflow: hidden;
+                .Image{
+                    width: 10.8rem;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+
+       .container{
+        top: -3rem;
+        gap: 1rem;
+
+            .Update{
+                top: 57%;
+                left: 120%;
+            }
+            .Quit{
+                top: 100%;
+                left: 0%;
+            }
+       }
+
+    }

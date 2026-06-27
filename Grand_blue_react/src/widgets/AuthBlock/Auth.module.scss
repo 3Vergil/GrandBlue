@@ -1,0 +1,42 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+.main{
+    @include func.flex-center($display: flex,$direction: column, $gap: 0.2rem, $loc: center);
+    height: 50vw;
+
+    .container{
+    @include func.glass-effect($color: var.$header-main-color, $radius: 1rem, $blur: 0.3rem);
+    @include func.grid-container( $row-size: 1fr );
+    width: 50rem;
+    height: 30rem;
+    .SignIn{
+         @include func.flex-center($display: flex,$direction: column, $loc: center);
+         height: 100%;
+         button{
+           position: absolute;
+         }
+    }
+    .LogIn{
+        background-color: #155c97;
+        border-radius: 1rem;
+        height: 100%;
+        @include func.flex-center($display: flex,$direction: column, $loc: center);
+    }
+    }
+    .button{
+            width: 30%;
+            background-color: rgb(173, 122, 4);
+            border-radius: 0.8rem;
+            font-family: var.$font-main;
+            color: white;
+            border: none;
+            height: 2rem;
+            cursor: pointer;
+            font-size: var.$font-size_subtitle;
+            &:hover{
+                background-color: rgb(206, 137, 9);
+                box-shadow: 1px 1px 1rem rgba(255, 166, 0, 0.664);
+                text-shadow: 1px 1px 3rem rgba(211, 208, 208, 0.595);
+            }
+        }
+}

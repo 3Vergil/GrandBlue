@@ -1,0 +1,21 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+.button{
+    @include func.flex-center($direction: column);
+    background-color: rgb(173, 122, 4);
+    border-radius: 0.8rem;
+    margin: 0.7rem;
+    text-shadow: 1px 1px 2rem rgba(190, 190, 190, 0.595);
+    width: calc(var(--width) *1%);
+    padding:0.3rem;
+    font-family: var.$font-main;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    &:hover{
+        background-color: rgb(206, 137, 9);
+        box-shadow: 1px 1px 1rem rgba(255, 166, 0, 0.664);
+        text-shadow: 1px 1px 3rem rgba(211, 208, 208, 0.595);
+       
+    }
+}

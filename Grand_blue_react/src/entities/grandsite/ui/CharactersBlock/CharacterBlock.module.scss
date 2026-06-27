@@ -1,0 +1,101 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+.InnerContainer {
+    @include func.grid-container($row-size: 0.5fr 1fr);
+    @include func.glass-effect(var.$header-main-color);
+    @include func.glass-border($size: 0.4rem);
+    border-radius: 1rem;
+    width: 60rem;
+    height: 30rem;
+    top: 20vh;
+    padding: 0; 
+
+   
+    .CharacterName {
+        font-size: 2.5rem;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .textContainer {
+        @include func.glass-effect();
+        @include func.glass-border();
+        border-radius: 1rem;
+        width: 35%;
+        left: 55%; 
+        top: 40%; 
+        transform: translateY(-50%);
+        padding: 1rem;
+        z-index: 5;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+    
+   
+    .inverseText {
+        left: 10%;
+    }
+
+
+    .ImageRigthSide {
+        right: 0;
+    }
+
+    .Body {
+        perspective: 100px;
+        height: 25rem;
+        margin: 0;
+        position: absolute;
+        top: -9rem;
+        padding: 0;
+        .Image { 
+            height: 100%;
+            transform: translateZ(-10px);
+        }
+    }
+    
+    .buttonLink {
+        top: 85%;
+        left: 45%;
+        font-size: 2rem;
+    }
+
+    .buttonFavorite {
+        top: 86%;
+        left: 26%;
+        font-size: 1.6rem;
+    }
+
+    .NavArrow {
+        @include func.glass-effect();
+        @include func.flex-center($direction: none);
+        @include func.glass-border();
+        color: white;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 4rem;
+        width: 4rem;
+        font-size: 3rem;
+        cursor: pointer;
+        z-index: 20;
+
+        &:hover {
+            backdrop-filter: blur(2rem);
+        }
+    }
+
+    .left {
+        left: -10%;
+    }
+    
+    .right {
+        right: -10%;
+    }
+}
+

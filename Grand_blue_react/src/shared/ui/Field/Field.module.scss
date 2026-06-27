@@ -1,0 +1,16 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+.container{
+
+    .label{
+        color: white;
+        top: -0.4rem;
+        left: 1rem;
+    }
+    .input{
+        padding: 0.4rem;
+        width: 100%;
+        margin: 0.8rem;
+        border-radius: 0.4rem;
+        border: none;
+    }
+}

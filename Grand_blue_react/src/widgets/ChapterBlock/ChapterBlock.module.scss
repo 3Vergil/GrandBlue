@@ -1,0 +1,41 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+
+.container{
+    @include func.flex-center($direction: column);
+    height: 100vh;
+    width: 100vw;
+    .Chapter{
+        @include func.glass-border($size: 0.3rem);
+        height: 80%;
+        width: 36%;
+        overflow: scroll;
+        box-shadow: -0.7rem 0.4rem 1rem rgba(33, 33, 33, 0.759);
+        &::-webkit-scrollbar{
+            display: none
+        }
+    }
+    .NavArrow{
+        @include func.glass-effect();
+        @include func.flex-center($direction: none);
+        @include func.glass-border();
+        color: white;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 4rem;
+        width: 4rem;
+        font-size: 3rem;
+        cursor: pointer;
+        &:hover{
+            backdrop-filter: blur(2rem);
+        }
+    }
+        .left{
+            left: 20%;
+        }
+        .right{
+            right: 20%;
+        }
+}

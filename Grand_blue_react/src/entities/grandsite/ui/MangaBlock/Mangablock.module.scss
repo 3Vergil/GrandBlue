@@ -1,0 +1,36 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+
+.Container{
+    @include func.glass-effect($color: var.$header-main-color, $radius: 1rem, $blur: 0.3rem);
+    @include func.grid-container();
+    height: 25rem;
+    width: 27rem;
+    transition: all 0.3s;
+    .Body{
+        @include func.flex-center($direction: column, $display: center, $gap: 1rem);
+        .Image{
+            @include func.glass-border($size: 0.32rem, $bd-color: rgba(177, 177, 177, 0.316));
+            height: 20rem;
+            border-radius: 1rem;
+            box-shadow: -0.7rem 0.4rem 1rem rgba(33, 33, 33, 0.759);
+             margin: 1rem;
+            margin-right: 0;
+        }
+    }
+    .ContainerButton{
+        .VolumeNumber{
+            @include func.flex-center($gap: 1rem);
+            font-size: var.$font-size-title;
+            font-family: var.$font-style-subtitle;
+            color: var.$header-text-color;
+            font-weight: 600;
+        }
+    }
+    &:hover{
+        @include func.glass-effect($color: rgba(10, 42, 148, 0.563), $radius: 1rem, $blur: 0.3rem);
+        transition: all 0.4s;
+        transform: translateY(-1rem);
+    }
+}

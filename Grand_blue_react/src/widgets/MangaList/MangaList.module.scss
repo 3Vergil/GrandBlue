@@ -1,0 +1,7 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+.Container{
+    @include func.grid-container($gap: 1.5rem, $column-size:0.1fr, $repeat:3,  $row-size: 0.5fr);
+    margin-top: 5rem;
+}

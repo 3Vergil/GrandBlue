@@ -1,0 +1,29 @@
+@mixin glass-effect($color: rgba(255, 255, 255, 0.15), $radius: 0, $blur: 0.3rem){
+    background-color: $color;
+    border-radius: $radius;
+    backdrop-filter: blur($blur);
+}
+@mixin glass-border($size: 0.2rem, $bd-color: rgba(255, 255, 255, 0.268)){
+    border-radius: 1rem;
+    border-top: $size solid $bd-color;
+    border-left: $size solid $bd-color;
+    border-bottom: none;
+    border-right: none;
+}
+@mixin flex-center($display: flex,$direction: row, $gap: 0.2rem, $loc: center){
+    display: $display;
+    justify-content: $loc;
+    align-items: center;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin grid-container($gap: 1rem, $column-size:1fr, $row-size: 1fr 1fr, $repeat:2){
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat( $repeat, $column-size);
+    grid-template-rows:  $row-size;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}

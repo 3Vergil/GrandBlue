@@ -1,0 +1,91 @@
+@use 'helpers/mixins' as func;
+@use 'variables' as var;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.main__content{
+    width: 70%;
+    height: 40vw;
+    @include func.grid-container($column-size: 1fr 0.8fr, $row-size: 1fr 1.1fr);
+
+    .main__content-UserInformation{
+        @include func.glass-effect(#cdc5c582, $radius: 0.5rem, $blur: 0.2rem);
+        padding: 1rem;
+
+        .UserInformation__drop-area{
+            @include func.glass-effect(#1a81b08f, $radius: 1.5rem, $blur: 0.4rem);
+            @include func.flex-center();
+            width: 12rem;
+            height: 12rem;
+            .UserInformation__img{
+                width: 90%;
+                height: 90%;
+                border-radius: 1.5rem;
+                border: 0.2rem dashed #0cbec7;
+                background-color: #10a7af62;
+                overflow: hidden;
+                img{
+                    width: 10.8rem;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+
+    .main__content-CurrentReading{
+        @include func.glass-effect(var.$header-main-color, $radius: 0.5rem, $blur: 0.2rem);
+    }
+
+    .main__content-FavoriteCharacters{
+        @include func.glass-effect(var.$header-main-color, $radius: 0.5rem, $blur: 0.2rem);
+        @include func.flex-center($display: flex,$direction: row, $gap: 1rem, $loc: center, );
+        overflow: scroll;
+        .main_character{
+            width: 10rem;
+            display: inline-block;
+            position: relative;
+            .character_image{
+                width: 10rem;
+                border-radius: 1rem;
+                transition: all 0.5s ease;
+                display: block;
+            }
+            &:has(.main_character--DeleteButton:hover) .character_image{
+                filter: blur(5px) sepia(0.5) saturate(100%);
+            }
+            .main_character--DeleteButton{
+                @include func.flex-center($display:inline-flex, $direction: column);
+                cursor: pointer;
+                opacity: 0;
+                z-index: 10;
+                top: 78%;
+                left: 5%;
+                position: absolute;
+                transition: all 0.8s ease;
+                .DeleteButton_top,
+                .DeleteButton_bottom{
+                    transition: all 0.8s ease;
+                }
+            }
+
+            .main_character--DeleteButton:hover{
+                .DeleteButton_top{
+                    transform: translate(-5px,-7px) rotateZ(-40deg);
+                    transition: all 0.8s ease;
+                }
+            }
+        }
+        .main_character:hover .main_character--DeleteButton{
+            transition: all 0.5s ease-in;
+            opacity: 1;
+        }
+    }
+
+    .main__content-CommentHistory{
+        @include func.glass-effect(var.$header-main-color, $radius: 0.5rem, $blur: 0.2rem);
+    }
+}
+
+.main__News{
+    @include func.glass-effect(var.$header-main-color, $radius: 0.5rem, $blur: 0.2rem);
+    width: 20%;
+}

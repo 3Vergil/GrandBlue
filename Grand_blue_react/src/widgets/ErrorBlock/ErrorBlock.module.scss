@@ -1,0 +1,37 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+.main{
+    @include func.flex-center($display: flex,$direction: column, $gap: 0.2rem, $loc: center);
+    height: 50vw;
+}
+
+.container{
+    @include func.glass-effect($radius: 1rem, $blur: 0.3rem);
+    @include func.glass-border();
+    @include func.flex-center($display: flex,$direction: column, $loc: center);
+    width: 60%;
+    height: 35rem;
+    z-index: 1;
+    .title{
+        font-size: 3.5rem;
+        letter-spacing: 0.2rem;
+        color: white;
+    }
+    
+    .content{
+        width: 50%;
+        transform: translateX(-10rem);
+    }
+    .Image{
+        height: 50%;
+        z-index: -5;
+        opacity: 0.15;
+        position: absolute;
+        top: 70%;
+        left: 120%;
+        transform: translate(-120%, -70%);
+        object-fit: contain;
+    }
+    
+}

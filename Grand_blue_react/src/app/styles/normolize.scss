@@ -1,0 +1,27 @@
+@use 'variables' as var;
+@use 'helpers/mixins.scss' as func;
+body{
+    @include func.flex-center($direction: column);
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 20, 40, 0.4) 0%, rgba(0, 0, 0, 0) 15%), url('/images/background_image/background.png');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-family: var.$font-main;
+    color: var.$header-text-color;
+    
+}
+
+h2{
+    color:white;
+    text-align: center;
+}
