@@ -34,7 +34,7 @@ const userDataReducer = (state, action) => {
 }
 
 const useProfile = () => {
-    const [userData, dispatch] = useReducer(userDataReducer, {})
+    const [userData, dispatch] = useReducer(userDataReducer, null)
     const UpdateData = async ()=>{
         try{
             const data = await profileApi.getOne()

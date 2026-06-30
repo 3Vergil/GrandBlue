@@ -11,7 +11,8 @@ export default (props) => {
         {href: '/music', label: 'MUSIC'},
         {href: '/wiki', label: 'WIKI'},
         {href: '/manga', label: 'MANGA'},
-        {href: userData  ? "/profile" : '/Auth', label: userData  ? 'Profile':'Sign_In'},
+        {href: userData ? "/profile" : '/Auth', 
+          label:  userData ? 'Profile':'Sign_In'},
         
     ]
 

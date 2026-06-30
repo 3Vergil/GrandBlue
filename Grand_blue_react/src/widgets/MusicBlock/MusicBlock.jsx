@@ -1,17 +1,16 @@
-import PlayerBlock from "../../entities/grandsite/ui/PlayerBlock"
+import LyrickBlock from "@/entities/grandsite/ui/LyrickBlock"
+import MusicPlayerBlock from "../../entities/grandsite/ui/MusicPlayerBlock"
+
 
 
 export default () => {
 
     return(
         <div>
-            <PlayerBlock />
+            <MusicPlayerBlock />
             <div>
-
             </div>
-            <div>
-                
-            </div>
+            <LyrickBlock />
         </div>
     )
 }
