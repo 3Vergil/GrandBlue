@@ -15,7 +15,7 @@ export default () =>{
     return <h2>Загрузка данных c сервера...</h2>;
   }
     return(
-        <div className={styles.Container}>
+        <div className={`${styles.Container} posrel`}>
           {mangaData.Volumes.map((item, i)=>{
             const volumeNumber = item.volume_number
             const chapters = mangaData.Chapters[i]?.chapters

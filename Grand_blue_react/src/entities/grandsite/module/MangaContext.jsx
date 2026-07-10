@@ -3,6 +3,7 @@ import useManga from "./useManga"
 import useAuth from "./useAuth"
 import useProfile from "./useProfile"
 import useWiki from "./useWiki"
+import useMusic from "./useMusic"
 export const MangaContext = createContext()
 
 export const MangaProvider = (props) => {
@@ -21,7 +22,7 @@ export const MangaProvider = (props) => {
     const {userData, fileInputRef, handleDragOver, handleDrop, QuitAccount, UpdateName,RemoveCharacter } = useProfile()
 
     const {charactersData,characterSlider, currentIndex, addToFavoriteCharacters} = useWiki()
-
+    const {musicData, MusicSlider, currentMusicIndex, isPlaying, toggleAudio,videoAudioRef, Replay} = useMusic()
     return(
         <MangaContext.Provider
         value={
@@ -42,6 +43,13 @@ export const MangaProvider = (props) => {
             currentIndex,
             addToFavoriteCharacters,
             RemoveCharacter,
+            musicData, 
+            MusicSlider, 
+            currentMusicIndex,
+            isPlaying, 
+            toggleAudio,
+            videoAudioRef,
+            Replay
            }
         }>
             {children}

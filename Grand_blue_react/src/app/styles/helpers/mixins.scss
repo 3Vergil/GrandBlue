@@ -18,10 +18,10 @@
     gap: $gap;
 }
 
-@mixin grid-container($gap: 1rem, $column-size:1fr, $row-size: 1fr 1fr, $repeat:2){
+@mixin grid-container($gap: 1rem,$column-size: 1fr, $row-size: 1fr 1fr, $repeat:2){
     display: grid;
     gap: $gap;
-    grid-template-columns: repeat( $repeat, $column-size);
+    grid-template-columns: repeat($repeat, $column-size);
     grid-template-rows:  $row-size;
     justify-content: center;
     align-content: center;

@@ -1,0 +1,23 @@
+@use '@/app/styles/helpers/mixins.scss' as func;
+@use '@/app/styles/variables.scss' as var;
+
+.MusicBlock{
+    @include func.glass-effect(var.$header-main-color); 
+    @include func.grid-container($repeat: 2, $row-size: 1fr );
+    border-radius: 1rem;
+    width: 70rem;
+    height: 35rem;
+    .VideoLyricBlock{
+        @include func.flex-center($direction: column, $gap: 0.2rem);
+        height: 100%;
+        .videoBlock{
+            @include func.glass-border();
+            width: 75%;
+            height: 40%;
+            overflow: hidden;
+            .video{
+                width: 100%;
+            }
+        }
+    }
+}
