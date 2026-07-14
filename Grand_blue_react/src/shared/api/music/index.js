@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:2014/api/music"
+const URL = "http://127.0.0.1:2014/music"
 
 const musicApi = {
     getMusics: async () => {

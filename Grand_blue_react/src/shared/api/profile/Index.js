@@ -1,6 +1,6 @@
 import { transformValueTypes } from "motion/react"
 
-const URL = "http://127.0.0.1:2014/api/profile"
+const URL = "http://127.0.0.1:2014/profile"
 const header = {
     'Content-Type': 'application/json',
 }

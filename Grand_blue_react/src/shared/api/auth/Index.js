@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:2014/api/auth"
+const URL = "http://127.0.0.1:2014/auth"
 const header = {
     'Content-Type': 'application/json'
 }
@@ -6,7 +6,7 @@ const header = {
 const authApi = {
     createAccount: async (userData) =>{
         try{
-            const response = await fetch(URL, {
+            const response = await fetch(`${URL}/signIn`, {
             method: "POST",
             headers: header,
             body: JSON.stringify(userData),

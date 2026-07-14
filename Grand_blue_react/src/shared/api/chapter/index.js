@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:2014/api/manga/chapter"
+const URL = "http://127.0.0.1:2014/manga/chapter"
 const header = {
     'Content-Type': 'application/json'
 }
